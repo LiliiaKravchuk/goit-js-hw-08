@@ -18,12 +18,6 @@ content: '';
 .gallery-image {
 }
 
-/* .is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-} */
-
 .basic-lightbox {
     position: fixed;
   top: 0;

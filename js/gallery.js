@@ -86,50 +86,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //       img_m.src = item.url;
       // img_m.alt = item.alt;
+
       li_m.appendChild(a_m);
       a_m.appendChild(img_m);
 
       gallery_ul.appendChild(li_m);
     });
 
-    // const lin = document
-    //   .querySelector(".gallery-image")
-    //   .getAttribute("data-source");
-
     gallery_ul.addEventListener("click", (event) => {
       event.preventDefault();
-        // const srcns = document.querySelectorAll(".gallery-images");
- 
-      // .forEach((item) => {
-        // console.log(item);
-        if (event.target.nodeName !== "IMG") {
-          return;
-        }
 
-        const instn = basicLightbox.create(
-          `
+      if (event.target.nodeName !== "IMG") {
+        return;
+      }
+
+      const instn = basicLightbox.create(
+        `
         <img src="${event.target.src}" width="1112px" height="640px">
 </img>        `,
-          {
-            closable: true,
-          },
-        );
-        // console.log(lin);
+        {
+          closable: true,
+        },
+      );
 
-        instn.show();
-      });
-    };
-  
+      instn.show();
+    });
+  }
+
   adding_gallery(images);
 });
-// const divmm = document.querySelector("body").createElement("div");
-//     divmm.classList.add("modal-overlay");
-//   const divmm2 = document.querySelector("body")
-//     .createElement("div");
-//     divmm2.classList.add("modal-window");
-//   const divmmnb = document.querySelector("body").createElement("img");
-//   divmmnb.classList.add("mi");
-
-//   divmmnb.setAttribute("data-source", item.original);
-//   divmmnb.setAttribute("height", "640px");
-//   divmmnb.setAttribute("width", "1112px");
